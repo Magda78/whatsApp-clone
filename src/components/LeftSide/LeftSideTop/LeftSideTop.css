@@ -1,0 +1,15 @@
+.leftSideTop {
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #d3d3d3;
+}
+
+.leftSideTop > .MuiSvgIcon-root {
+    margin-right: 10px;
+}
+
+.leftSideTop > .MuiAvatar-root {
+    margin-right: 10px;
+}

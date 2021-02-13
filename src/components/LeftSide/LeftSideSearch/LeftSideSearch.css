@@ -1,0 +1,19 @@
+.leftSideSearch {
+    background-color: #ebecf0;
+    padding: 10px
+}
+
+.leftSideSearch__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.leftSideSearch__item > input {
+    border: none;
+    outline: none;
+    margin-left: 10px;
+}

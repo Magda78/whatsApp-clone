@@ -1,0 +1,27 @@
+.leftSideBodyItem {
+    display: flex;
+    padding: 10px;
+}
+
+.leftSideBodyItem__infoContainer {
+    display: flex;
+    flex: 0.6;
+}
+
+.leftSideBodyItem__info > h4 {
+ color: #bebebe;
+}
+
+.leftSideBodyItem__date {
+    display: flex;
+    justify-content: flex-end;
+    flex: 0.4 1;
+}
+
+.leftSideBodyItem__date > p {
+    color: #bebebe;
+}
+
+.leftSideBodyItem__avatar {
+    margin-right: 10px;
+}
