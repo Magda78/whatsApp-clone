@@ -6,8 +6,8 @@
 
 .app {
   display: flex;
-  height: 100vh;
   overflow: hidden;
+  border-bottom: 1px solid #128C7E;
 }
 
 .app__left {

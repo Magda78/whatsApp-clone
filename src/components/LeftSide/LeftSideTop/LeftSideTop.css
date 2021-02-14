@@ -3,13 +3,16 @@
     padding: 5px;
     align-items: center;
     justify-content: flex-end;
-    background-color: #d3d3d3;
+    background-color: #128C7E;
 }
 
 .leftSideTop > .MuiSvgIcon-root {
     margin-right: 10px;
+    color: white;
+    cursor: pointer;
 }
 
 .leftSideTop > .MuiAvatar-root {
     margin-right: 10px;
+    cursor: pointer;
 }

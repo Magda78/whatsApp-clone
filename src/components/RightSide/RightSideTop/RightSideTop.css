@@ -1,0 +1,30 @@
+.rightSideTop {
+    width: 100%;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #128C7E;
+    border-left: 1px solid #ebecf0;
+}
+
+.rightSideTop__info {
+    display: flex;
+    align-items: center;
+}
+
+.rightSideTop__info > h3{
+    color: white;
+}
+
+.rightSideTop__info > .MuiAvatar-root {
+    margin-right: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.rightSideTop__icons {
+    margin-right: 10px;
+    color: white;
+    cursor: pointer;
+}
