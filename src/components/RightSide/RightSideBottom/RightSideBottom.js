@@ -1,19 +1,31 @@
-import React from 'react';
+import React,{ useState } from 'react';
 import './RightSideBottom.css';
 import TagFacesIcon from '@material-ui/icons/TagFaces';
 import AttachFileIcon from '@material-ui/icons/AttachFile';
 import MicNoneIcon from '@material-ui/icons/MicNone';
 
 function RightSideBottom() {
-    return (
-        <div className='rightSideBottom'>
-            <TagFacesIcon  />
-            <AttachFileIcon />
-            <input type='text' placeholder='Type a message' />
-            <MicNoneIcon />
+    const[addMsg, setAddMsg] = useState('')
+    const addMessageHandler = (e) => {
+        setAddMsg(e.target.value);
+        e.preventDefault();
+    }
 
-        </div>
-    )
+    const submitMsgHandler = () => {
+        console.log(addMsg);
+        setAddMsg('')
+    }
+	return (
+		<div className="rightSideBottom">
+			<TagFacesIcon />
+			<AttachFileIcon />
+			<form>
+				<input type="text" placeholder="Type a message" onChange={addMessageHandler}/>
+			<button onClick={submitMsgHandler}>Send</button>
+            </form>
+			<MicNoneIcon />
+		</div>
+	);
 }
 
-export default RightSideBottom
+export default RightSideBottom;

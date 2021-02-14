@@ -12,11 +12,31 @@
     cursor: pointer;
 }
 
-.rightSideBottom > input {
+.rightSideBottom > form {
     flex: 1;
+    display: flex;
+}
+
+.rightSideBottom > form > input {
     padding: 10px;
     outline: none;
     border: none;
     border-radius: 15px;
     background-color: white;
+    width: 100%;
+}
+
+.rightSideBottom > form > button {
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    background-color: #25D366;
+    padding: 10px;
+    color: #128C7E;
+    margin-left: 10px;
+}
+
+.rightSideBottom > form > button:hover {
+    background-color: #DCF8C6;
+    color: #128C7E;
 }

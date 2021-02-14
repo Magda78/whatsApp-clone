@@ -7,7 +7,10 @@ function LeftSideSearch() {
 		<div className="leftSideSearch">
 			<div className="leftSideSearch__item">
 				<SearchIcon />
-				<input type="text" placeholder="Search or start new chat" />
+                <form>
+                <input type="text" placeholder="Search or start new chat" />
+                </form>
+				
 			</div>
 		</div>
 	);

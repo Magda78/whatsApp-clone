@@ -1,26 +1,33 @@
-import React from 'react';
-import './LeftSideBody.css'
+import React, { useState, useEffect } from 'react';
+import './LeftSideBody.css';
 import LeftSideBodyItem from './LeftSideBodyItem/LeftSideBodyItem';
+import db from '../../../firebase';
 
 function LeftSideBody() {
-    return (
-        <div className='leftSideBody'>
-            <LeftSideBodyItem />
-            <LeftSideBodyItem />
-            <LeftSideBodyItem />
-            <LeftSideBodyItem />
-            <LeftSideBodyItem />
-            <LeftSideBodyItem />
-            <LeftSideBodyItem />
-            <LeftSideBodyItem />
-            <LeftSideBodyItem />
-            <LeftSideBodyItem />
-            <LeftSideBodyItem />
-            <LeftSideBodyItem />
-            <LeftSideBodyItem />
-            
-        </div>
-    )
+	const [ rooms, setRooms ] = useState([]);
+
+	useEffect(() => {
+		db.collection('rooms').onSnapshot((snapshot) =>
+			setRooms(
+				snapshot.docs.map((doc) => ({
+					id: doc.id,
+					data: doc.data()
+				}))
+			)
+		);
+	}, []);
+
+	return (
+		<div className="leftSideBody">
+                {rooms.map(item => (
+                    <LeftSideBodyItem 
+                    key={item.id}
+                    id={item.id}
+                    name={item.data.name}/>
+                ))}
+				
+		</div>
+	);
 }
 
-export default LeftSideBody
+export default LeftSideBody;

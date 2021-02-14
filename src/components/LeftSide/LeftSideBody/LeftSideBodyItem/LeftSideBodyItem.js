@@ -2,7 +2,7 @@ import React from 'react';
 import './LeftSideBodyItem.css';
 import { Avatar } from '@material-ui/core';
 
-function LeftSideBodyItem() {
+function LeftSideBodyItem({ name, id }) {
     return (
         <div className='leftSideBodyItem'>
             <div className='leftSideBodyItem__infoContainer'>
@@ -11,7 +11,7 @@ function LeftSideBodyItem() {
                 <Avatar />
                 </div>
             <div className='leftSideBodyItem__info'>
-                <h3>Name</h3>
+                <h3>{name}</h3>
                 <h4>Message</h4>
             </div>
             </div>

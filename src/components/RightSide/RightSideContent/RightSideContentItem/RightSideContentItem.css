@@ -1,0 +1,24 @@
+.rightSideContentItem {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.rightSideContentItem__msg {
+    background-color: #DCF8C6;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 10px;
+    display: flex;
+    align-items: baseline;
+}
+
+.rightSideContentItem__msgText {
+    margin-right: 10px;
+}
+
+.rightSideContentItem__msgTime {
+    font-size: x-small;
+    color: #bebebe;
+}
