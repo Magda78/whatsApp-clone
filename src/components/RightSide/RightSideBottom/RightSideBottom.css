@@ -33,7 +33,8 @@
     background-color: #25D366;
     padding: 10px;
     color: #128C7E;
-    margin-left: 10px;
+    margin-left: 50px;
+    cursor: pointer;
 }
 
 .rightSideBottom > form > button:hover {

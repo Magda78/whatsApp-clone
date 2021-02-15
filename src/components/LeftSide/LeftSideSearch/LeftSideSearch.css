@@ -12,8 +12,30 @@
     background-color: white;
 }
 
-.leftSideSearch__item > input {
+.leftSideSearch__item > form {
+    justify-content: space-between;
+    flex: 1 1;
+    display: flex;
+}
+
+.leftSideSearch__item > form > input {
     border: none;
     outline: none;
     margin-left: 10px;
+}
+
+.leftSideSearch__item > form > button {
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    background-color: #25D366;
+    padding: 10px;
+    color: #128C7E;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.leftSideSearch__item > form > button:hover {
+    background-color: #DCF8C6;
+    color: #128C7E;
 }

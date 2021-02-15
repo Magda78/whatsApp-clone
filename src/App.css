@@ -9,11 +9,3 @@
   overflow: hidden;
   border-bottom: 1px solid #128C7E;
 }
-
-.app__left {
-  flex: 0.4;
-}
-
-.app__right {
-  flex: 0.6
-}

@@ -1,18 +1,20 @@
 import React from 'react';
-//import { Counter } from './features/counter/Counter';
 import './App.css';
 import LeftSide from './components/LeftSide/LeftSide';
 import RightSide from './components/RightSide/RightSide';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const App = () => {
 	return (
 		<div className="app">
-			<div className="app__left">
+			<Router>
 				<LeftSide />
-			</div>
-			<div className="app__right">
-				<RightSide />
-			</div>
+				<Switch>
+					<Route path="/rooms/:roomId">
+						<RightSide />
+					</Route>
+				</Switch>
+			</Router>
 		</div>
 	);
 };

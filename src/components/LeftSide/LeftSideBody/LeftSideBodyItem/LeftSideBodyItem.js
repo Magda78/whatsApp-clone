@@ -1,10 +1,13 @@
 import React from 'react';
 import './LeftSideBodyItem.css';
 import { Avatar } from '@material-ui/core';
+import { Link } from 'react-router-dom'
 
 function LeftSideBodyItem({ name, id }) {
+    
     return (
-        <div className='leftSideBodyItem'>
+        <Link to={`/rooms/${id}`}>
+            <div className='leftSideBodyItem'>
             <div className='leftSideBodyItem__infoContainer'>
                 
             <div className='leftSideBodyItem__avatar'>
@@ -19,6 +22,8 @@ function LeftSideBodyItem({ name, id }) {
                 <p>Date</p>
             </div>
         </div>
+        </Link>
+        
     )
 }
 
