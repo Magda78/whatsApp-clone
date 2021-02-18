@@ -5,6 +5,7 @@ import db from '../../../firebase';
 
 function LeftSideBody() {
 	const [ rooms, setRooms ] = useState([]);
+ 
 
 	useEffect(() => {
 		const toCleanUp = db.collection('rooms').onSnapshot((snapshot) =>
