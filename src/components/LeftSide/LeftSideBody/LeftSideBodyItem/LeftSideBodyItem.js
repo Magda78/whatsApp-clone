@@ -17,7 +17,7 @@ setMsgs(snapshot.docs.map((doc) => doc.data()))
             ))
         }
         
-    }, [])
+    }, [id])
 
 
     return (
