@@ -19,7 +19,7 @@ function RightSideContent() {
 					.collection('rooms')
 					.doc(roomId)
 					.collection('msg')
-					.orderBy('timeStamp', 'asc')
+					.orderBy('timestamp', 'asc')
 					.onSnapshot((snapshot) => setMessages(snapshot.docs.map((doc) => doc.data())));
             }
 		},
@@ -29,7 +29,7 @@ function RightSideContent() {
 	return (
 		<div className="rightSideContent">
 			{messages.map((item) => {
-				return <RightSideContentItem name={item.name} timeStamp={item.timeStamp} msg={item.msg} />;
+				return <RightSideContentItem name={item.name} timeStamp={item.timestamp} msg={item.msg} />;
 			})}
 		</div>
 	);

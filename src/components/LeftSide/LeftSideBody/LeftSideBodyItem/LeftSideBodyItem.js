@@ -1,10 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './LeftSideBodyItem.css';
 import { Avatar } from '@material-ui/core';
 import { Link } from 'react-router-dom'
+import db from '../../../../firebase';
 
 function LeftSideBodyItem({ name, id }) {
-    
+    const[ msgs, setMsgs] = useState('')
+    useEffect(() => {
+        if(id) {
+            db.collection('rooms')
+            .doc(id)
+            .collection('msg')
+            .orderBy('timestamp', 'desc')
+            .onSnapshot(snapshot => (
+setMsgs(snapshot.docs.map((doc) => doc.data()))
+            ))
+        }
+        
+    }, [])
+
+
     return (
         <Link to={`/rooms/${id}`}>
             <div className='leftSideBodyItem'>
@@ -15,11 +30,8 @@ function LeftSideBodyItem({ name, id }) {
                 </div>
             <div className='leftSideBodyItem__info'>
                 <h3>{name}</h3>
-                <h4>Message</h4>
+                <h4>{msgs[0]?.msg}</h4>
             </div>
-            </div>
-            <div className='leftSideBodyItem__date'>
-                <p>Date</p>
             </div>
         </div>
         </Link>
